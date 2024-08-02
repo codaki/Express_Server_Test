@@ -6,6 +6,17 @@ import viteLogo from "/vite.svg";
 function App() {
   const [count, setCount] = useState(0);
   console.log("Testing APP.jsx");
+  function test() {
+    fetch("http://localhost:8800/")
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }
+  test();
   return (
     <>
       <div>
